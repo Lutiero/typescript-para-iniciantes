@@ -1,12 +1,12 @@
-const links = document.querySelectorAll(".link");
+function tipoDeDado<T>(a: T) {
+  const resultado = {
+    dado: a,
+    tipo: typeof a,
+  };
 
-function ativarElemento(elemento: HTMLAnchorElement) {
-  elemento.style.color = "red";
-  elemento.style.border = "2px solid ##fff";
+  console.log(resultado);
+  return resultado;
 }
 
-links.forEach((link) => {
-  if (link instanceof HTMLAnchorElement) {
-    ativarElemento(link);
-  }
-});
+const nav = document.getElementById("nav");
+tipoDeDado(nav);

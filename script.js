@@ -1,11 +1,10 @@
-"use strict";
-const links = document.querySelectorAll(".link");
-function ativarElemento(elemento) {
-    elemento.style.color = "red";
-    elemento.style.border = "2px solid ##fff";
+function tipoDeDado(a) {
+    var resultado = {
+        dado: a,
+        tipo: typeof a,
+    };
+    console.log(resultado);
+    return resultado;
 }
-links.forEach((link) => {
-    if (link instanceof HTMLAnchorElement) {
-        ativarElemento(link);
-    }
-});
+var nav = document.getElementById("nav");
+tipoDeDado(nav);
